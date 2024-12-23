@@ -1,51 +1,25 @@
--- Sundbybergs Stad Info-beamer Lua-script
--- Detta skript renderar en dynamisk layout med text och scheman som hämtas från en JSON-fil
-
-local json = require "json"
-
--- Konfigurationsfil
+-- Läs konfiguration
 local config_path = "config.json"
-
--- Funktion för att läsa JSON-konfigurationsfilen
-local function read_config(path)
-    local file = io.open(path, "r")
-    if not file then
-        error("Kunde inte öppna konfigurationsfilen: " .. path)
-    end
-    local content = file:read("*a")
-    file:close()
-    return json.decode(content)
-end
-
--- Läser konfigurationsfilen
 local config = read_config(config_path)
 
--- Funktion för att rita innehållet
+-- Färger
+local bg_color = config.colors.background or "#FFFFFF"
+local header_color = config.colors.header or "#000000"
+local text_color = config.colors.text or "#000000"
+
 function node.render()
-    gl.clear(1, 1, 1, 1) -- Vit bakgrund
+    -- Bakgrund
+    gl.clear(bg_color.r, bg_color.g, bg_color.b, 1)
 
-    -- Rita rubrik
-    font:write(50, 20, config.title, 80, 1, 1, 1, 1)
+    -- Rubrik
+    font:write(50, 20, config.title, config.layout.font_size.title, 1, 1, 1, 1)
 
-    -- Rita Aktuellt-sektion
-    font:write(50, 150, "Aktuellt:", 50, 0, 0, 0, 1)
-    font:write(50, 220, config.aktuellt, 40, 0, 0, 0, 1)
+    -- Aktuellt
+    font:write(50, 150, config.aktuellt, config.layout.font_size.text, text_color.r, text_color.g, text_color.b, 1)
 
-    -- Rita scheman
-    local y_offset = 400
-    font:write(50, y_offset, "Schema - Person 1:", 50, 0, 0, 0, 1)
+    -- Schema
+    local y_offset = 250
     for i, item in ipairs(config.schema.person1) do
-        font:write(50, y_offset + i * 50, item, 40, 0, 0, 0, 1)
+        font:write(50, y_offset + i * config.layout.padding, item, config.layout.font_size.text, text_color.r, text_color.g, text_color.b, 1)
     end
-
-    y_offset = y_offset + #config.schema.person1 * 50 + 100
-    font:write(50, y_offset, "Schema - Person 2:", 50, 0, 0, 0, 1)
-    for i, item in ipairs(config.schema.person2) do
-        font:write(50, y_offset + i * 50, item, 40, 0, 0, 0, 1)
-    end
-
-    -- Rita Kontakt
-    y_offset = y_offset + #config.schema.person2 * 50 + 100
-    font:write(50, y_offset, "Kontakt:", 50, 0, 0, 0, 1)
-    font:write(50, y_offset + 70, config.kontakt, 40, 0, 0, 0, 1)
 end
