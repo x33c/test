@@ -1,0 +1,17 @@
+{
+    "title": "Sundbybergs stad",
+    "aktuellt": "Håll dig uppdaterad med de senaste nyheterna och meddelandena från Sundbybergs Stad.",
+    "schema": {
+        "person1": [
+            "09:00 - Morgonmöte",
+            "12:00 - Lunchpaus",
+            "15:00 - Eftermiddagspresentation"
+        ],
+        "person2": [
+            "10:00 - Projektplanering",
+            "13:00 - Teammöte",
+            "16:00 - Avslutningsmöte"
+        ]
+    },
+    "kontakt": "Behöver du hjälp? Besök oss på www.sundbyberg.se eller ring 08-123 456 78."
+}
