@@ -1,5 +1,31 @@
 {
     "name": "Sundbybergs Info",
-    "type": "customizable",
-    "description": "En anpassningsbar info-tavla för Sundbybergs stad."
+    "description": "En anpassningsbar informationstavla för Sundbybergs stad.",
+    "fields": {
+        "title": {
+            "type": "text",
+            "label": "Titel",
+            "default": "Sundbybergs stad"
+        },
+        "aktuellt": {
+            "type": "textarea",
+            "label": "Aktuellt",
+            "default": "Håll dig uppdaterad med de senaste nyheterna och meddelandena från Sundbybergs stad."
+        },
+        "schema_person1": {
+            "type": "textarea",
+            "label": "Schema - Person 1",
+            "default": "09:00 - Morgonmöte\n12:00 - Lunchpaus\n15:00 - Eftermiddagspresentation"
+        },
+        "schema_person2": {
+            "type": "textarea",
+            "label": "Schema - Person 2",
+            "default": "10:00 - Projektplanering\n13:00 - Teammöte\n16:00 - Avslutningsmöte"
+        },
+        "contact": {
+            "type": "textarea",
+            "label": "Kontaktinformation",
+            "default": "Behöver du hjälp? Besök oss på www.sundbyberg.se eller ring 08-123 456 78."
+        }
+    }
 }
