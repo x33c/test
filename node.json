@@ -1,5 +1,5 @@
 {
-    "name": "Sundbybergs Info-beamer Node",
-    "type": "simple_info",
-    "description": "Sundbybergs informationssystem"
+    "name": "Sundbybergs Info",
+    "type": "customizable",
+    "description": "En anpassningsbar info-tavla för Sundbybergs stad."
 }
