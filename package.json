@@ -1,6 +1,7 @@
 {
     "name": "sundbybergs_info",
     "version": "1.0",
+    "desc": "Ett enkelt informationssystem för Sundbybergs stad.",
     "description": "Sundbybergs informationssystem byggt för Info-beamer.",
     "author": "Ditt namn",
     "dependencies": []
