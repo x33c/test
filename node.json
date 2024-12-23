@@ -1,5 +1,5 @@
 {
-    "name": "Sundbybergs Info",
+    "name": "sundbybergs_info",
     "description": "En anpassningsbar informationstavla för Sundbybergs stad.",
     "fields": {
         "title": {
