@@ -1,17 +1,32 @@
 {
     "title": "Sundbybergs stad",
-    "aktuellt": "Håll dig uppdaterad med de senaste nyheterna och meddelandena från Sundbybergs Stad.",
+    "colors": {
+        "background": "#F5F5F5",
+        "header": "#BF516E",
+        "text": "#000000"
+    },
+    "aktuellt": "Håll dig uppdaterad med de senaste nyheterna.",
     "schema": {
         "person1": [
             "09:00 - Morgonmöte",
             "12:00 - Lunchpaus",
-            "15:00 - Eftermiddagspresentation"
+            "15:00 - Presentation"
         ],
         "person2": [
-            "10:00 - Projektplanering",
+            "10:00 - Planering",
             "13:00 - Teammöte",
-            "16:00 - Avslutningsmöte"
+            "16:00 - Avslutning"
         ]
     },
-    "kontakt": "Behöver du hjälp? Besök oss på www.sundbyberg.se eller ring 08-123 456 78."
+    "contact": {
+        "text": "Behöver du hjälp? Besök oss på www.sundbyberg.se",
+        "phone": "08-123 456 78"
+    },
+    "layout": {
+        "font_size": {
+            "title": 80,
+            "text": 40
+        },
+        "padding": 20
+    }
 }
