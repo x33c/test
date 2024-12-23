@@ -1,4 +1,5 @@
 {
+    "name": "Sundbybergs Info-beamer Node",
     "type": "simple_info",
     "description": "Sundbybergs informationssystem"
 }
